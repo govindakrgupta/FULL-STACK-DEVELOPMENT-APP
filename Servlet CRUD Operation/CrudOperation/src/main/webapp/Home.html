@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+  #frm {
+     width: 500px;
+     margin: auto;
+     margin-top: 50px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     border-radius: 10px;
+     background-color: #f8f9fa;
+  }
+  marquee {
+     margin-top: 10px;
+  }
+  .table td {
+     vertical-align: middle;
+  }
+  .card-header {
+     font-size: 1.5rem;
+  }
+  .btn-custom {
+     display: block;
+     width: 100%;
+     margin-top: 10px;
+  }
+  .btn a {
+     color: inherit;
+     text-decoration: none;
+  }
+  .form-control {
+     border-radius: 5px;
+  }
+  .btn-outline-success:hover, .btn-outline-danger:hover {
+     color: #fff;
+  }
+  .form-check-label {
+     margin-left: 5px;
+  }
+</style>
+</head>
+<body class="container-fluid">
+    <marquee><h2 class="text-primary">Register Here</h2></marquee>
+    <form action="register" method="post" class="form card" id="frm">
+        <h2 class="bg-danger text-white card-header text-center">Registration Form</h2>
+        <table class="table table-borderless">
+        <tr>
+         <td><label for="userName">Name</label></td>
+         <td><input type="text" name="userName" id="userName" class="form-control" required></td>
+        </tr>
+        <tr>
+         <td><label for="email">Email</label></td>
+         <td><input type="email" name="email" id="email" class="form-control" required></td>
+        </tr>
+        <tr>
+         <td><label for="mobile">Mobile</label></td>
+         <td><input type="text" name="mobile" id="mobile" class="form-control" required></td>
+        </tr>
+        <tr>
+         <td><label for="dob">DOB</label></td>
+         <td><input type="date" name="dob" id="dob" class="form-control" required></td>
+        </tr>
+        <tr>
+         <td><label for="city">City</label></td>
+         <td>
+           <select name="city" id="city" class="form-control">
+            <option value="Dallas">Dallas</option>
+            <option value="Haslet">Haslet</option>
+            <option value="Euless">Euless</option>
+            <option value="Justin">Justin</option>
+           </select>
+         </td>
+        </tr>
+        <tr>
+         <td>Gender</td>
+         <td>
+           <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+             <label class="form-check-label" for="male">Male</label>
+           </div>
+           <div class="form-check form-check-inline">
+             <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+             <label class="form-check-label" for="female">Female</label>
+           </div>
+         </td>
+        </tr>
+        <tr>
+         <td colspan="2">
+           <button type="submit" class="btn btn-outline-success btn-custom">Register</button>
+           <button type="reset" class="btn btn-outline-danger btn-custom">Cancel</button>
+         </td>
+        </tr>
+        </table>
+        <button class="btn btn-outline-primary btn-custom"><a href="showdata">Show Users</a></button>
+    </form>
+</body>
+</html>
